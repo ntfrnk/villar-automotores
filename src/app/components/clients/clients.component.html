@@ -1,0 +1,9 @@
+<section class="clients">
+    <div class="">
+        <owl-carousel-o [options]="albumOpt">
+            <ng-template carouselSlide *ngFor="let photo of photos">
+                <img src="{{ photo.picture.sm }}" />
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</section>

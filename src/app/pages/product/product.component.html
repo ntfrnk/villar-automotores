@@ -1,0 +1,51 @@
+<section class="detail-product pb50">
+
+    <div class="container mt40">
+        <div class="row">
+
+            <div class="col-12 col-md-8">
+
+                <div class="header-image relative">
+                    <img [src]="product.picture.lg" class="img-fluid">
+                    <div class="b0 l0 absolute title"></div>
+                    <div class="container relative">
+                        <div class="b25 l25 absolute">
+                            <h1 class="display-4 ttu text-light fw600 name">
+                                {{ product.name }}
+                            </h1>
+                            <span *ngIf="isSold" class="sold">
+                                Unidad vendida
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detail">
+                    <div class="pt30" innerHTML="product.content"></div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-4">
+
+                <div class="card">
+                    <div class="card-header fw600 f20">Características: </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let feature of features">
+                            <strong>{{ feature.label }}:</strong> {{ feature.value }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt20">
+                    <a href="https://api.whatsapp.com/send/?phone=543814013209&amp;text=Hola!%20Quisiera%20contactarme%20para%20recibir%20asesoramiento%20para%20la%20adquisici%C3%B3n%20un%20veh%C3%ADculo.&amp;app_absent=0" target="_blank" class="w100 btn btn-success ">
+                        <icon name="whatsapp" color="#FFF" [size]="18" class="mr5"></icon>
+                        Consultar detalles
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>

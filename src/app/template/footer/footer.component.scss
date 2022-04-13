@@ -1,0 +1,28 @@
+@import '/src/assets/sass/colors.scss';
+
+footer {
+    background: $dark;
+    padding: 4.5rem;
+    margin-top: 5rem;
+
+    .links {
+        margin-bottom: 1rem;
+
+        a {
+            color: $white;
+            margin: 0 .6rem;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .social {
+
+        a {
+            margin: 0 .6rem;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<heading [title]="page.title" [image]="page.picture.lg"></heading>
+
+<div class="container">
+    <div [innerHTML]="page.content" class="content"></div>
+
+    <div class="row">
+        <div class="col-md-4 mb30" *ngFor="let product of products">
+            <card [product]="product"></card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<section class="featured">
+
+    <div class="container mt50">
+
+        <div class="mb40 ac">
+            <h1>Vehículos destacados</h1>
+        </div>
+
+        <owl-carousel-o [options]="featuredOpt">
+            <ng-template carouselSlide *ngFor="let product of products">
+                <card [product]="product"></card>
+            </ng-template>
+        </owl-carousel-o>
+        
+    </div>
+
+</section>

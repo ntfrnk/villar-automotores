@@ -1,0 +1,15 @@
+<svg 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    [attr.width]="size" 
+    [attr.height]="size" 
+    [attr.viewBox]="'0 0 20 20'" 
+    [attr.class]="class" 
+    [attr.style]="style"
+>
+    <path 
+        *ngFor="let path of paths"
+        [attr.d]="path" 
+        [attr.fill]="color"
+    ></path>
+</svg>

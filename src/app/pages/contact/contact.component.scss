@@ -1,0 +1,30 @@
+
+.container {
+    min-height: 300px;
+
+    .content {
+        margin: 3rem 0;
+        font-size: 1.1rem;
+    }
+
+    .form-contacto {
+        background: #F4F4F4;
+        padding: 2.5rem;
+        border-radius: 5px;
+
+        .form-group {
+            margin-bottom: 1.2rem;
+
+            label {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .network {
+
+        a {
+            margin-right: .7rem;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<heading [title]="page.title" [image]="page.picture.lg"></heading>
+
+<div class="container">
+    <div [innerHTML]="page.content" class="content"></div>
+
+    <div class="row d-flex">
+        <div class="col-md-4 mb30 d-flex" *ngFor="let video of videos">
+
+            <div class="card d-flex">
+                <a [href]="video.link" target="_blank">
+                    <img src="https://i.ytimg.com/vi/{{ videoCode(video.link) }}/hqdefault.jpg" class="card-img-top" />
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title truncate t2">
+                        <a [href]="video.link" target="_blank">{{ video.title }}</a>
+                    </h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

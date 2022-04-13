@@ -1,0 +1,19 @@
+<div class="slider-container">
+    <owl-carousel-o [options]="sliderOpt" #slider1>
+        <ng-template carouselSlide *ngFor="let slider of sliders">
+            <img [src]="slider.picture.mobile_sm" *ngIf="['xs', 'sm'].includes(size)">
+            <img [src]="slider.picture.desktop_sm" *ngIf="size === 'md'">
+            <img [src]="slider.picture.desktop_lg" *ngIf="['lg', 'xl'].includes(size)">
+            <div class="caption">
+                <div class="container">
+                    <div class="box">
+                        <h1>
+                            <span>{{ slider.title }}</span>
+                        </h1>
+                        <p><span>{{ slider.summary }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

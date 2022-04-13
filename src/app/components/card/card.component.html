@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="image">
+        <a [routerLink]="'/' + product.group.slug + '/' + product.slug">
+            <img src="{{ product.picture.sm }}" class="card-img-top" />
+        </a>
+        <div *ngIf="product.sold" class="sold">Vendido</div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title truncate t1">
+            <a [routerLink]="'/' + product.group.slug + '/' + product.slug">{{ product.name }}</a>
+        </h5>
+        <a [routerLink]="'/' + product.group.slug + '/' + product.slug" class="btn btn-primary">Ver más info</a>
+    </div>
+</div>

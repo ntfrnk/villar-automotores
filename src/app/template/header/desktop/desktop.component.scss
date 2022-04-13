@@ -1,0 +1,36 @@
+@import '/src/assets/sass/colors.scss';
+
+header {
+    background: lighten($black, 15%);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+
+        .logo {
+
+            img {
+                height: 60px;
+            }
+        }
+
+        nav {
+
+            a {
+                color: $white;
+                padding: 15px 15px;
+                text-decoration: none;
+                border-bottom: solid 3px lighten($black, 15%);
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    color: $white;
+                    border-bottom: solid 3px darken($white, 25%);
+                    background: darken($white, 80%);
+                }
+            }
+        }
+    }
+}

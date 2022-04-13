@@ -1,0 +1,24 @@
+@import '/src/assets/sass/colors';
+
+.block-services {
+    background: $blue;
+    color: $white;
+    padding: 5rem 0;
+
+    h1 {
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    .services {
+        display: flex;
+
+        .item {
+            text-align: center;
+
+            .icon {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

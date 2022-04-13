@@ -1,0 +1,33 @@
+@import '/src/assets/sass/colors';
+
+.heading {
+    position: relative;
+    text-align: center;
+
+    .image {
+        max-height: 230px;
+        overflow-y: hidden;
+
+        img {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+    .bg-title {
+        text-align: left;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 3rem 0 1rem;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba($black, 0), rgba($black, 0.9));
+        
+        h1 {
+            font-size: 3.6rem;
+            font-weight: 600;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+}

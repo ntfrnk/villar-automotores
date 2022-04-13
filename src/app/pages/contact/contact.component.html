@@ -1,0 +1,80 @@
+<heading [title]="page.title" [image]="page.picture.lg"></heading>
+
+<div class="container">
+    <div [innerHTML]="page.content" class="content"></div>
+
+    <div class="row ml5">
+
+		<div class="form-contacto col-12 col-md-8">
+
+			<form #contactForm="ngForm" (ngSubmit)="sendContact(contactForm)" method="POST">
+
+				<div class="form">
+							
+					<div class="form-group">
+						<label for="name" class="">Nombre completo </label>
+                        <input #name="ngModel" [(ngModel)]="contact.name" type="text" class="form-control {{ name.touched && name.invalid ? 'is-invalid' : '' }}" name="name" placeholder="Ingresa tu nombre" required pattern="^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\' ]{5,50}$" autocomplete="off" />
+                        <span *ngIf="name.touched && name.invalid" class="text-danger f12 fw600">Debes completar este campo. Sólo puedes usar letras.</span>
+                    </div>
+
+					<div class="form-group">
+						<label for="phone" class="">Teléfono </label>
+                        <input #phone="ngModel" [(ngModel)]="contact.phone" type="tel" class="form-control {{ phone.touched && phone.invalid ? 'is-invalid' : '' }}" name="phone" value="" placeholder="Tu número de teléfono" required pattern="^[0-9+]{10,18}$" autocomplete="off" />
+                        <span class="text-muted f13" *ngIf="!phone.touched || !phone.invalid">Cod. de área (sin el 0) + número (sin el 15)</span>
+                        <span *ngIf="phone.touched && phone.invalid" class="text-danger f12 fw600">Debes completar este campo. Sólo puedes usar números y el signo más (+).</span>
+                    </div>
+
+					<div class="form-group">
+						<label for="consult" class="">Consulta </label>
+                        <textarea #consult="ngModel" [(ngModel)]="contact.consult" class="form-control {{ consult.touched && consult.invalid ? 'is-invalid' : '' }}" name="consult" rows="5" placeholder="Tu consulta" required></textarea>
+                        <span *ngIf="consult.touched && consult.invalid" class="text-danger f12 fw600">Debes completar indicar tu consulta.</span>
+                    </div>
+
+					<div class="form-group">
+						<button id="send" type="submit" class="btn btn-primary col-xs-12 mt10 w100" onclick="">Enviar consulta</button>
+                    </div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+		
+		<div class="col-12 col-md-4 datos-contacto">
+			
+			<h3 class="pl15">Vías de contacto</h3>
+
+			<div class="lh30 pl15 mt15">
+				
+                <div>Av. Presidente Perón 2300<br>Yerba Buena - Tucumán</div>
+				<div>info@villarautomotores.com.ar</div>
+
+                <div class="mt10 network">
+                    <a href="https://api.whatsapp.com/send/?phone=543814013209&amp;text=Hola!%20Quisiera%20contactarme%20para%20recibir%20asesoramiento%20para%20la%20adquisici%C3%B3n%20un%20veh%C3%ADculo.&amp;app_absent=0" target="_blank" class="">
+                        <icon name="whatsapp" color="#25D366" [size]="30"></icon>
+                    </a>
+                    <a href="https://www.facebook.com/villarautomotores" target="_blank" class="">
+                        <icon name="facebook" color="#1877F2" [size]="30"></icon>
+                    </a>
+                    <a href="https://www.instagram.com/villar_automotores/" target="_blank" class="">
+                        <icon name="instagram" color="#E4405F" [size]="30"></icon>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC_6yBPneRvPaTK7mTniwzXQ" target="_blank" class="">
+                        <icon name="youtube" color="#CD201F" [size]="30"></icon>
+                    </a>
+                </div>
+
+				<div class="mt30">
+					<div class="embed-responsive embed-responsive-4by3">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.2733638853983!2d-65.30529038486186!3d-26.799423094943645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942242c6ce898cc9%3A0x8b0bc0e3e9a5d404!2sAv.%20Juan%20Domingo%20Per%C3%B3n%202300%2C%20Yerba%20Buena%2C%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1616726077474!5m2!1ses!2sar" width="100%" class="embed-responsive-item"></iframe>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

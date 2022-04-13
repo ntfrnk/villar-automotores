@@ -1,0 +1,45 @@
+
+.btn {
+
+    &.btn-primary {
+        background: $primary;
+        color: #FFF;
+        border: none;
+
+        &:hover {
+            background: $primary-hover;
+        }
+    }
+
+    &.btn-secondary {
+        background: $secondary;
+        color: #FFF;
+        border: none;
+
+        &:hover {
+            background: $secondary-hover;
+        }
+    }
+
+}
+
+.primary {
+	color: $primary;
+}
+
+.secondary {
+	color: $secondary;
+}
+
+
+
+.carousel {
+
+    .carousel-caption {
+
+        h1 {
+            text-transform: uppercase;
+        }
+    }
+    
+}
