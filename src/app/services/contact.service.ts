@@ -13,7 +13,8 @@ export class ContactService {
   send(consulta: any) {
     this._api.setOptions({
       endpoint: 'contact',
-      apiURL: 'https://api.kbzas.ar/apimail/'
+      apiURL: 'http://supermanager.test/apimail/'
+      //apiURL: 'https://api.kbzas.ar/apimail/'
     });
     return this._api.post(consulta);
   }

@@ -24,6 +24,9 @@ export class Api {
 		if (options.token) {
 			this.token = options.token;
 		}
+		if (options.apiURL) {
+			this.apiURL = options.apiURL;
+		}
 	}
 
 	/*

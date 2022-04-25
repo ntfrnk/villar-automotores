@@ -1,6 +1,3 @@
-import { Width } from "ngx-owl-carousel-o/lib/services/carousel.service";
-
-
 export const Browser: any = {
 
 	width: window.innerWidth,

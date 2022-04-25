@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
   public contact: {
     name: string,
     phone: number|null,
-    consult: string
+    consulta: string
   };
 
   public error: boolean = false;
@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
     private _contact: ContactService,
     private _router: Router
   ) {
-    this.contact = {name: '', phone: null, consult: ''};
+    this.contact = {name: '', phone: null, consulta: ''};
   }
 
   ngOnInit(): void {
@@ -48,18 +48,20 @@ export class ContactComponent implements OnInit {
   }
 
   sendContact(form: any){
-    this._contact.send(this.contact).subscribe(() => {
-      response: {
+    this._contact.send(this.contact).subscribe(
+      response => {
         this.success = true;
         this.error = false;
         form.reset();
-        this._router.navigate(['']);
-      }
-      error: {
+        setTimeout(() => {
+          this._router.navigate(['']);
+        }, 5000);
+      },
+      error => {
         this.success = false;
         this.error = true;
       }
-    });
+    );
   }
   
 }
